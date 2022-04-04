@@ -14,15 +14,16 @@ func WordCount(text string) map[string]int {
 	freqs := make(map[string]int)
 	text = strings.ToLower(text)
 
-	words := strings.Split(text, " ")
+	words := strings.Fields(text)
 	for _, word := range words {
-		freqs[word] = freqs[word] + 1
+		word = strings.Trim(word, ".")
+		word = strings.Trim(word, ",")
+		freqs[word]++
 	}
 	return freqs
 }
 
 // Benchmark how long it takes to count word frequencies in text numRuns times.
-//
 // Return the total time elapsed.
 func benchmark(text string, numRuns int) int64 {
 	start := time.Now()
