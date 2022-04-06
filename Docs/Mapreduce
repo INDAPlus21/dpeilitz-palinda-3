@@ -1,0 +1,11 @@
+Single worker 
+
+amount of runs: 100
+total time: 1424 ms
+average time/run: 14.24 ms
+
+Mapreduce
+
+amount of runs: 100
+total time: 1224 ms
+average time/run: 12.24 ms
